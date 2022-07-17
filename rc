@@ -1,0 +1,30 @@
+export STARSHIP_CONFIG="$HOME/.zsh/starship.toml"
+export ZSH_HOME="$HOME/.zsh"
+
+fpath+=$ZSH_HOME/completions
+export fpath
+
+HISTFILE=~/.histfile
+HISTSIZE=100000
+SAVEHIST=100000
+
+ZSH_PLUGINS=(
+  zsh-autosuggestions
+  zsh-completions
+  zsh-syntax-highlighting
+)
+
+source $ZSH_HOME/aliases
+source $ZSH_HOME/zstyle
+source $ZSH_HOME/functions
+source $ZSH_HOME/keybindings
+
+setopt autocd extendedglob nomatch
+unsetopt beep
+loadplugins
+
+autoload -U promptinit; promptinit
+autoload -Uz compinit; compinit
+
+eval "`starship init zsh`"
+

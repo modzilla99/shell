@@ -1,0 +1,4 @@
+zstyle ':completion:*' menu select
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+zstyle ':compinstall' filename '/home/justin/.zshrc'

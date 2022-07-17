@@ -1,0 +1,9 @@
+alias k=kubectl
+alias kgp="kubectl get po"
+alias kep="kubectl edit po"
+alias klt="kubectl logs --tail=30"
+alias kgn="kubectl get no -o wide"
+alias kgds="kubectl get ds"
+alias kgr="kubectl get rs"
+alias kgd="kubectl get deploy"
+

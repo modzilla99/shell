@@ -1,0 +1,11 @@
+function loadplugins() {
+  for plugin in ${ZSH_PLUGINS[@]}; do
+    source ${ZSH_HOME}/plugins/${plugin}/${plugin}.plugin.zsh
+  done
+}
+
+function loadcompletions() {
+  for completion in `ls $ZSH_HOME/completions`; do
+    source ${ZSH_HOME}/completions/${completion}
+  done
+}
